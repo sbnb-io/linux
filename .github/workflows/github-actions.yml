@@ -2,7 +2,7 @@ name: build-kernel
 on: [push]
 jobs:
   build-kernel:
-    runs-on: ubuntu-large
+    runs-on: sbnb
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt install -y flex bison libelf-dev libssl-dev libncurses-dev git build-essential bc tmux cpio python3
