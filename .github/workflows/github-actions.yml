@@ -1,0 +1,10 @@
+name: build-kernel 
+on: [push]
+jobs:
+  build-kernel:
+    runs-on: ubuntu-large
+    steps:
+      - uses: actions/checkout@v4
+      - run: make defconfig
+      - run: make -j $(nproc)
+      - run: echo done
